@@ -1,18 +1,18 @@
+//model category
+const Sequelize = require("sequelize");
+const connection = require("../database/database");
 
-const Sequelize = require('sequelize');
-const connection = require('../database/database');
-
-const Category = connection.define('categories', {
+const Category = connection.define("categories", {
   title: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
   },
   slug: {
     type: Sequelize.STRING,
-    allowNull: false
-  }
+    allowNull: false,
+  },
 });
-//Sincronizando 
+//Sincronizando
 // Category.sync({force: true});
 
 module.exports = Category;
