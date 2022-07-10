@@ -1,0 +1,5 @@
+#home {
+  /* width: 90vw; */
+  height: 50vh;
+  background: url("/img/home.jpg") center center / cover no-repeat;
+}

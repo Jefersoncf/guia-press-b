@@ -1,6 +1,63 @@
 <%- include('partials/header.ejs') %>
 <%- include('partials/home_navbar.ejs') %> 
+<!-- <body class=""> -->
 <body>
-  <h1>Hello world, this is my page.</h1>
-</body>
+  
+  <div class="container">
+    <hr>
+    <div id="home" class="bg-image text-center text-white p-5 mb-4 rounded-3">
+      
+      <!-- <h1 class="display">Seja Bem-vindo(a) ao Dev</>Blog</h1>
+        <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <a href="" class="btn btn-primary">Click</a> -->
+        
+        <div class="mask">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">Seja Bem-vindo(a) ao Dev</>Blog</h1>
+              <p class="mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <a href="" class="btn btn-primary">Click</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- <a href="" class="btn btn-secondary">Click</a>  -->
+        
+      </div>
+      
+      <!-- Grid row -->
+      <div class="row">
+        <% articles.forEach(article => {%>
+          
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-4">
+            
+            <!--Card-->
+            <div class="card">
+              
+              <!--Card image-->
+              <div class="view overlay hm-white-slight">
+                <img src="img/hom.jpg" class="img-fluid rounded-top" alt="photo">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+              
+              <!--Title-->
+              <div class="card-header">
+                <h2 class="card-title"><%= article.title %></h2>
+              </div>
+              <div class="card-body">
+                <!-- <p class=""><%- article.body %></p> -->
+                <a href="/<%= article.slug %>" class="btn btn-secondary btn-md">Ler artigo</a>
+              </div>
+            </div>
+            <!--/.Card-->
+          </div>
+          <% }) %> 
+        </div>
+        
+      </div>
+      <!-- </body> -->
+    </body>
 <%- include('partials/footer.ejs') %>
