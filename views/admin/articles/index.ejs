@@ -22,14 +22,14 @@
           <td><%= article.id %> </td>
           <td><%= article.title %> </td>
           <td><%= article.slug %> </td>
-          <td><%= article.category.title %> </td>
+          <td><%= article.category %> </td>
           <td>
             <form method="post" action="/articles/delete" style="display: inline;"        onsubmit="deleteConfirm(event, this)">
               <input type="hidden" name="id" value="<%= article.id %>">
               <button class="btn btn-danger">Deletar</button>
             </form>
-          </tr>
-        </td>
+          </td>
+        </tr>
       <% }) %> 
      
     </tbody>
